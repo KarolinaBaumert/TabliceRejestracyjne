@@ -85,8 +85,8 @@ with open('results/plate_numbers.txt', 'w') as plate_file, open('results/iou_res
 
             gray_plate = cv2.cvtColor(plate_region, cv2.COLOR_BGR2GRAY)
 
-            alpha = 1.5  # współczynnik kontrastu
-            beta = 20    # wartość jasności
+            alpha = 2.0  # współczynnik kontrastu
+            beta = 25    # wartość jasności
             gray_plate = cv2.convertScaleAbs(gray_plate, alpha=alpha, beta=beta)
 
             # usuwanie szumów za pomocą rozmycia Gaussa
